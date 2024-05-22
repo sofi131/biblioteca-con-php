@@ -14,10 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
+<style>
+    .container {
+        padding-top: 20px;
+        /* Ajuste el espaciado entre el encabezado y la lista de libros */
+    }
+</style>
 <div class="container">
     <h2>Añadir Autor</h2>
-    <?php if (isset($error)): ?>
+    <?php if (isset($error)) : ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
     <?php endif; ?>
     <form method="POST">
@@ -29,4 +34,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </div>
 
-<?php require '../includes/footer.php'; // Pie de página común ?>
+<?php require '../includes/footer.php'; // Pie de página común 
+?>

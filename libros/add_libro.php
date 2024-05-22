@@ -19,10 +19,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
+<style>
+    .container {
+        padding-top: 20px;
+        /* Ajuste el espaciado entre el encabezado y la lista de libros */
+    }
+</style>
 <div class="container">
     <h2>Añadir Libro</h2>
-    <?php if (isset($error)): ?>
+    <?php if (isset($error)) : ?>
         <div class="alert alert-danger"><?php echo $error; ?></div>
     <?php endif; ?>
     <form method="POST">
@@ -33,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="form-group">
             <label for="autor_id">Autor:</label>
             <select class="form-control" id="autor_id" name="autor_id" required>
-                <?php foreach ($autores as $autor): ?>
+                <?php foreach ($autores as $autor) : ?>
                     <option value="<?php echo $autor['id']; ?>"><?php echo htmlspecialchars($autor['nombre']); ?></option>
                 <?php endforeach; ?>
             </select>
@@ -42,4 +47,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </div>
 
-<?php require '../includes/footer.php'; // Pie de página común ?>
+<?php require '../includes/footer.php'; // Pie de página común 
+?>
