@@ -16,13 +16,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/index.php">Libros</a>
+                    <a class="nav-link" href="index.php">Libros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/autores/add_autor.php">Añadir Autor</a>
+                    <a class="nav-link" href="autores/add_autor.php">Añadir Autor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/libros/add_libro.php">Añadir Libro</a>
+                    <a class="nav-link" href="libros/add_libro.php">Añadir Libro</a>
                 </li>
             </ul>
         </div>
